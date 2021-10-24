@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import Post from './post';
 
 const Feed = () => {
+
+  const address = process.env.REACT_APP_API ?? 'http://localhost:8787';
+
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState('');
@@ -21,9 +24,7 @@ const Feed = () => {
   const getPosts = async () => {
     try {
       setLoading(true);
-      const resp = await fetch(
-        "http://127.0.0.1:8787/posts"
-      );
+      const resp = await fetch(address + '/posts');
       const postsResp = await resp.json();
       setPosts(postsResp);
       setError('');
@@ -55,7 +56,7 @@ const Feed = () => {
 
     try {
       setLoading(true);
-      await fetch("http://127.0.0.1:8787/posts", requestOptions);
+      await fetch(address + '/posts', requestOptions);
     } catch (e) {
       setError(e.toString());
     } finally {
