@@ -1,0 +1,97 @@
+.App {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    width: 50%;
+    background-color: aliceblue;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 2rem 5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.white-box {
+    background-color: white;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+
+.posts {
+
+}
+
+.create-post {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-post input {
+    width: 300px;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.create-post textarea {
+    width: 300px;
+    height: 5rem;
+}
+
+.create-post-button {
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 100px;
+}
+
+.posts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post {
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-header h4 {
+    margin: 0;
+}
+
+.post-body {
+
+}
+
+.post-footer {
+    font-style: italic;
+}
+
+
+.delete-post-button {
+    font-weight: bold;
+    display: block;
+}
